@@ -1,0 +1,17 @@
+function telephoneCheck(str) {
+  /*The telephone number is made of the following components: 
+  1. The country code 1 and the space - optional
+  2. 3 digits - Either (555) or 555 - compulsory
+  3. Space or line - optional
+  4. 3 digits e.g 555 - compulsory
+  5. Space or line - optional
+  6. 4 digits e.g 555 - compulsory
+
+  */
+
+  var regex = /^((1)(\s?))?(\([0-9]{3}\)|[0-9]{3})(\s|-)?[0-9]{3}(\s|-)?[0-9]{4}$/;
+  return regex.test(str)
+
+}
+
+telephoneCheck("555-555-5555");
